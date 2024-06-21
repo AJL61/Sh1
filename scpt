@@ -35,5 +35,5 @@ source ~/.bashrc
 
 
 echo ' ===================================== '
-echo ' 		      Operation terminée           '
+echo ' 		  Operation terminée           '
 echo ' ===================================== '
