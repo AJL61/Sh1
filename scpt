@@ -2,6 +2,9 @@
 
 clear
 
+# Adapter pour l'installation d'un Serveur CLI 
+apt install sudo -y
+
 # Installation MàJ
 sudo dnf update -y && sudo dnf upgrade -y
 
@@ -32,6 +35,9 @@ echo 'alias s="dnf search"' >> ~/.bashrc
 
 # Application des alias sur l'utilisateur en cours 
 source ~/.bashrc 
+
+# Supprimer le script à la fin de l'installation 
+rm scpt
 
 
 echo ' ===================================== '
