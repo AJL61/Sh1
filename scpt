@@ -15,7 +15,7 @@ sudo dnf install vim -y
 sudo dnf install NetworkManager-tui -y
 
 # Configuration vimrc
-echo 'set no compatible' >> ~/.vimrc
+echo 'set nocompatible' >> ~/.vimrc
 echo 'set number' >> ~/.vimrc
 
 # Save file configuration 
