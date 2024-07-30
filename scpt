@@ -12,7 +12,7 @@ sudo dnf update -y && sudo dnf upgrade -y
 sudo dnf install vim -y
 
 # Installation du package Network
-sudo dnf install NetworkManager-tui -y
+sudo dnf install net-tools -y
 
 # Configuration vimrc
 echo 'set nocompatible' >> ~/.vimrc
@@ -41,5 +41,5 @@ rm scpt
 
 
 echo ' ===================================== '
-echo ' 		      Operation terminée           '
+echo '          Operation terminée           '
 echo ' ===================================== '
