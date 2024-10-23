@@ -3,7 +3,7 @@
 clear
 
 # Adapter pour l'installation d'un Serveur CLI 
-apt install sudo -y
+dnf install sudo -y
 
 # Installation MàJ
 sudo dnf update -y && sudo dnf upgrade -y
@@ -19,25 +19,43 @@ echo 'set nocompatible' >> ~/.vimrc
 echo 'set number' >> ~/.vimrc
 
 # Save file configuration 
-mkdir /home/SaveConfig
-cp -v /etc/bashrc /home/SaveConfig
+mkdir ~/SaveConfig
+cp -v /etc/bashrc ~/SaveConfig
+cp -v /etc/bash.bashrc ~/SaveConfig
+
+
+#Personnalisation du Terminal avec Starship 
+curl -sS https://starship.rs/install.sh | sh
 
 
 
 # Configuration bashrc
+echo '  ' >> /etc/bashrc
+echo '# My alias ' >> /etc/bashrc
+echo 'alias c="clear"' >> /etc/bashrc
+echo 'alias u="sudo dnf update -y && sudo dnf upgrade -y"' >> /etc/bashrc
+echo 'alias i="sudo dnf install -y"' >> /etc/bashrc
+echo 'alias s="dnf search"' >> /etc/bashrc
+echo ' "$(starship init bash)" ' >> /etc/bashrc
 
-echo '  ' >> ~/.bashrc
-echo '# My alias ' >> ~/.bashrc
-echo 'alias c="clear"' >> ~/.bashrc
-echo 'alias u="sudo dnf update -y && sudo dnf upgrade -y"' >> ~/.bashrc
-echo 'alias i="sudo dnf install -y"' >> ~/.bashrc
-echo 'alias s="dnf search"' >> ~/.bashrc
+
+# Configuration bash.bashrc  
+echo '  ' >> /etc/bash.bashrc
+echo '# My alias ' >> /etc/bash.bashrc
+echo 'alias c="clear"' >> /etc/bash.bashrc
+echo 'alias u="sudo dnf update -y && sudo dnf upgrade -y"' >> /etc/bash.bashrc
+echo 'alias i="sudo dnf install -y"' >> /etc/bash.bashrc
+echo 'alias s="dnf search"' >> /etc/bash.bashrc
+echo ' "$(starship init bash)" ' >> /etc/bash.bashrc
+
 
 # Application des alias sur l'utilisateur en cours 
-source ~/.bashrc 
+source /etc/bashrc
+source /etc/bash.bashrc
 
 # Supprimer le script à la fin de l'installation 
-rm scpt
+# rm scpt
+
 
 
 echo ' ===================================== '
