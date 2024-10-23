@@ -36,7 +36,7 @@ echo 'alias c="clear"' >> /etc/bashrc
 echo 'alias u="sudo dnf update -y && sudo dnf upgrade -y"' >> /etc/bashrc
 echo 'alias i="sudo dnf install -y"' >> /etc/bashrc
 echo 'alias s="dnf search"' >> /etc/bashrc
-echo ' "eval "$(starship init bash)"" ' >> /etc/bashrc
+echo 'eval "$(starship init bash)"' >> /etc/bashrc
 
 
 # Configuration bash.bashrc  
@@ -46,7 +46,7 @@ echo 'alias c="clear"' >> /etc/bash.bashrc
 echo 'alias u="sudo dnf update -y && sudo dnf upgrade -y"' >> /etc/bash.bashrc
 echo 'alias i="sudo dnf install -y"' >> /etc/bash.bashrc
 echo 'alias s="dnf search"' >> /etc/bash.bashrc
-echo ' "eval "$(starship init bash)"" ' >> /etc/bash.bashrc
+echo 'eval "$(starship init bash)"' >> /etc/bash.bashrc
 
 
 # Application des alias sur l'utilisateur en cours 
