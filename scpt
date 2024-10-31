@@ -8,8 +8,8 @@ dnf install sudo -y
 # Installation MàJ
 sudo dnf update -y && sudo dnf upgrade -y
 
-# Installation vim & curl
-sudo dnf install vim curl -y
+# Installation vim, curl et tmux
+sudo dnf install vim curl tmux -y
 
 # Installation du package Network
 sudo dnf install net-tools -y
