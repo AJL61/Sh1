@@ -14,9 +14,23 @@ sudo dnf install vim curl tmux -y
 # Installation du package Network
 sudo dnf install net-tools -y
 
-# Configuration vimrc
-echo 'set nocompatible' >> ~/.vimrc
-echo 'set number' >> ~/.vimrc
+
+# Configuration vmirc global 
+echo 'set nocompatible' >> /etc/vimrc
+echo 'set number' >> /etc/vimrc 
+
+# Configuration vimrc indentation
+echo 'set autoindent' >> /etc/vimrc
+echo 'set smartindent' >> /etc/vimrc
+echo 'set tabstop=4' >> /etc/vimrc
+echo 'shiftwidth=4' >> /etc/vimrc
+echo 'set expandtab' >> /etc/vimrc
+
+echo 'inoremap { {}<Left>' >> /etc/vimrc
+echo 'inoremap ( ()<Left>' >> /etc/vimrc
+echo 'inoremap " ""<Left>' >> /etc/vimrc
+echo 'inoremap [ []<Left>' >> /etc/vimrc
+
 
 # Save file configuration 
 mkdir ~/SaveConfig
