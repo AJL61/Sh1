@@ -23,7 +23,7 @@ echo 'set number' >> /etc/vimrc
 echo 'set autoindent' >> /etc/vimrc
 echo 'set smartindent' >> /etc/vimrc
 echo 'set tabstop=4' >> /etc/vimrc
-echo 'shiftwidth=4' >> /etc/vimrc
+echo 'set shiftwidth=4' >> /etc/vimrc
 echo 'set expandtab' >> /etc/vimrc
 
 echo 'inoremap { {}<Left>' >> /etc/vimrc
